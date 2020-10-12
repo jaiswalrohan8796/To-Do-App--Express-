@@ -1,0 +1,23 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{pageTitle}
+        link(rel="stylesheet", href="css/style.css")
+    body
+        header.main-header
+            nav.main-header_nav 
+                ul.main-header_navlist
+                    li.main-header_navlist-item
+                        a(href="/works") Works
+                    li.main-header_navlist-item
+                        a(href="#") Add-Work
+        main.main-body
+            form.form-body(action="/add-work", method="post")
+                label.form-item(for="work") Work:
+                    input(type="text", name="workname")
+                br
+                label.form-item(for="date") Date:
+                    input(type="date", name="date")
+                    
+                button.btn(type="submit") Add
